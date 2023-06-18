@@ -1,4 +1,4 @@
-remote_theme: dieghernan/chulapa
+#remote_theme: dieghernan/chulapa
 
 # Find errors on this file with http://www.yamllint.com/
 
@@ -8,10 +8,10 @@ remote_theme: dieghernan/chulapa
 # Overall options for your site, would affect your site SEO
 # Default values are explained
 locale                  :     #default["en-US"] format language-TERRITORY , e.g fr, en-GB, es-MX, pt-BR
-title                   : Chulapa 101    #default["repository_name"]
+title                   : Oskar's Adventures    #default["repository_name"]
 title_separator         :     #default [" | "]
-subtitle                : Chulapa Jekyll Theme starter pack    #default [your-repository-tagline]  
-description             : Chulapa Jekyll Theme starter pack #default [your-repository-tagline]
+subtitle                : personal website about things I love    #default [your-repository-tagline]  
+description             : personal website about things I love #default [your-repository-tagline]
 url                     :     #See baseurl - On Github Pages you may leave it blank - If you use CNAME use your domain
 baseurl                 :     #On Github Pages you may leave it blank. Have a look to: https://byparker.com/blog/2014/clearing-up-confusion-around-baseurl/
 words_per_minute        :     #default[200]
@@ -21,9 +21,9 @@ timezone                :     #"Europe/Madrid ,see https://jekyllrb.com/docs/con
 og_image                :     #default[author.avatar (see below)] or [github-avatar]
 twitter_site            :     #Avoid @
 author:
-  name                  :  Your Name   # Name Surname Company
-  avatar                :     # Try a square file. Info: Your github avatar on https://github.com/[USERNAME].png
-  location              :  "Madrid, Spain"   # New York, USA 
+  name                  :  Oskar # Name Surname Company
+  avatar                :  assets/images/oskar-main.jpg   # Try a square file. Info: Your github avatar on https://github.com/[USERNAME].png
+  location              :  "Vienna, Austria"   # New York, USA 
 #  links:                
 #    - url:  #A link or email: https://twitter.com/jack, mail@example.com
 #      icon: # A Fontawesome 5 code: fab fa-twitter - see https://fontawesome.com/
@@ -49,39 +49,39 @@ search:
   label                 :  #default ["Search"] Text on navbar when search is enabled 
   landing_page          :  #default ["/search"] Link on navbar 
   lunr_maxwords         :  #default [30] lunr only - May slow down your site build
-  algolia_logo          :  true #Displays algolia logo. Should be set to true if you are on a community plan, otherwise false.  
-
-google_cse_id: #Your cse id
-# This site uses jekyll-algolia plugin https://community.algolia.com/jekyll-algolia/
-# Recommended additional configuration provided, could be modified. Add your own parameters
-algolia:                                                                   
-  application_id        : 
-  index_name            : 
-  search_only_api_key   : 
-  files_to_exclude:         #Optional
-    - _layouts/*.html
-    - _includes/*.html
-  extensions_to_index:      #Optional
-    - html
-    - md
-  searchableAttributes:     #Optional                                                    
-    - title                                                                    
-    - headings                                                                 
-    - unordered(content)                                                       
-    - unordered(subtitle)                                                      
-    - unordered(categories)                                                    
-    - unordered(collection)                                                    
-    - unordered(tags) 
-  customRanking:            #Optional
-    - desc(include_on_search)
-    - desc(title)
-    - desc(content) 
-    - desc(subtitle)
-    
-comments:
-  provider:         #Enable comments via Disqus, giscus or Cactus.chat
-  disqus_shortname: #Your site id : check your address https://{{ disqus.shortname }}.disqus.com/admin/
-  cactus_shortname: #Your site id as registered with Cactus.chat
+#   algolia_logo          :  true #Displays algolia logo. Should be set to true if you are on a community plan, otherwise false.  
+# 
+# google_cse_id: #Your cse id
+# # This site uses jekyll-algolia plugin https://community.algolia.com/jekyll-algolia/
+# # Recommended additional configuration provided, could be modified. Add your own parameters
+# algolia:                                                                   
+#   application_id        : 
+#   index_name            : 
+#   search_only_api_key   : 
+#   files_to_exclude:         #Optional
+#     - _layouts/*.html
+#     - _includes/*.html
+#   extensions_to_index:      #Optional
+#     - html
+#     - md
+#   searchableAttributes:     #Optional                                                    
+#     - title                                                                    
+#     - headings                                                                 
+#     - unordered(content)                                                       
+#     - unordered(subtitle)                                                      
+#     - unordered(categories)                                                    
+#     - unordered(collection)                                                    
+#     - unordered(tags) 
+#   customRanking:            #Optional
+#     - desc(include_on_search)
+#     - desc(title)
+#     - desc(content) 
+#     - desc(subtitle)
+#     
+# comments:
+#   provider:         #Enable comments via Disqus, giscus or Cactus.chat
+#   disqus_shortname: #Your site id : check your address https://{{ disqus.shortname }}.disqus.com/admin/
+#   cactus_shortname: #Your site id as registered with Cactus.chat
   
 # B. Navigation
 # Configure your navbar and the footer of your site
@@ -90,31 +90,35 @@ comments:
 #   "brand" options would be set on the left side of your navbar
 #   "nav" would be set on the right side. Two-level nav links available
 navbar:
-  style     :  #default is the classical top navbar, set "fab" for a floating action button navbar or "dual"
+  style     :  dual #default is the classical top navbar, set "fab" for a floating action button navbar or "dual"
   expand    :  # At which device size expand the navbar menu. default[md] https://getbootstrap.com/docs/4.5/layout/overview/
   brand:
     title   :  Home # Title in navbar
     url     :  # default["url/baseurl"]
-    img     :  # An small image, try 30x30px
+    img     :  # assets/images/target.svg # An small image, try 30x30px
   nav:
   - title   : Blog # Label
     url     : /blog/ # url	
-  - title   : Cheatsheets
-    url     : /cheatsheets
-  - title   : Extras
-    child   :
-      - title : Tags
-        url   : /tags
-      - title : Categories
-        url   : /categories
-      - title : Archive
-        url   : /archive
-      - title : Current skin
-        url   : /current-skin
-  - title   : Docs
-    url     : https://dieghernan.github.io/chulapa/docs/01-install
-  - title   : Use this template
-    url     : https://github.com/dieghernan/chulapa-101/generate
+  - title : Tags
+    url   : /tags
+  - title : About
+    url   : /about
+  #- title   : Cheatsheets
+  #  url     : /cheatsheets
+  #- title   : Extras
+  #  child   :
+  #    - title : Tags
+  #      url   : /tags
+  #    - title : Categories
+  #      url   : /categories
+  #    - title : Archive
+  #      url   : /archive
+  - title : Current skin
+    url   : /current-skin
+  #- title   : Docs
+  #  url     : https://dieghernan.github.io/chulapa/docs/01-install
+  #- title   : Use this template
+  #  url     : https://github.com/dieghernan/chulapa-101/generate
 #  - title   : # Label submenu
 #    child:		
 #    - title: # Child label		
@@ -124,12 +128,12 @@ navbar:
 #Social links to be placed on your site footer
 footer:
   links:
-    - label : Repo on Github # Label
-      icon  : fab fa-github # Fontawesome 5 icon
-      url   : https://github.com/dieghernan/chulapa-101 # A link or email: https://twitter.com/jack, mail@example.com
-    - label: "RSS"
-      icon: "fa fa-rss"
-      url:  "./atom.xml"
+  #  - label : Repo on Github # Label
+  #    icon  : fab fa-github # Fontawesome 5 icon
+  #    url   : https://github.com/dieghernan/chulapa-101 # A link or email: https://twitter.com/jack, mail@example.com
+  #  - label: "RSS"
+  #    icon: "fa fa-rss"
+  #    url:  "./atom.xml"
   copyright: # default is © <year> <name> 
   
 # C. Theme Settings
@@ -140,11 +144,13 @@ googlefonts:
 # Theme and colors
 chulapa-skin: 
   highlight     :  # default["default"]
-  skin         :  # Optional predefined skins
-  autothemer    :  true # Bool: Use autotheming
+  skin         :  sketchy # Optional predefined skins
+  autothemer    :  false # Bool: Use autotheming
   vars          :    
-    primary     : lightskyblue #default ["#007bff"] - Bootstrap blue
+    primary     : ['#C8961E'] # darkgreen #lightskyblue #default ["#007bff"] - Bootstrap blue
     
+# dark color palette from coolors.co:
+# {"Goldenrod":"dfa92a","Dark cyan":"008b8b","Jet":"39393a","Amaranth":"db324d","Mint cream":"eaf2ef"}
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
 
 # Blog pagination: on this site /blog/index.html. https://jekyllrb.com/docs/pagination/
@@ -171,7 +177,7 @@ defaults:
       header_type: "base"
       include_on_search   : false
       cloudtag_url        : /tags #This is where the link on tags would redirect
-      cloudcategory_url   : /categories #This is where the link on categories would redirect
+      #cloudcategory_url   : /categories #This is where the link on categories would redirect
   -
     scope:
       path: ""
@@ -179,14 +185,14 @@ defaults:
     values:
       header_type       : "post"
       include_on_search : true
-      include_on_feed   : true
+      include_on_feed   : false
       show_date         : true
       show_related      : true
       show_bottomnavs   : true
-      show_sociallinks  : true
+      show_sociallinks  : false
       show_comments     : true
       show_tags         : true
-      show_categories   : true
+      show_categories   : false
       show_author       : true
       show_breadcrumb   : true
       breadcrumb_list   :
@@ -199,7 +205,7 @@ defaults:
     values:
       header_type       : "hero"
       show_bottomnavs   : true
-      show_sociallinks  : true
+      show_sociallinks  : false
       include_on_search : true
       show_breadcrumb   : true
       breadcrumb_list   :
@@ -215,7 +221,7 @@ compress_html:
   blanklines: true
 
 plugins:
-  - jekyll-github-metadata
+#  - jekyll-github-metadata
   - jekyll-paginate
   - jekyll-include-cache
   - jekyll-sitemap
@@ -255,3 +261,25 @@ sass:
   sass_dir: _sass
   style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - sandbox/
+  - README.md

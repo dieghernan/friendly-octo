@@ -1,8 +1,15 @@
 ---
 layout: default
-title: Chulapa on remote
+title: Oskar's Adventures <br> ᛟᛊᚲᚨᚱᛊ ᚨᛞᚢᛖᚾᛏᚢᚱᛖᛊ
 header_type: hero
-subtitle: Starter pack
+subtitle: a blog about games, drawing and other great things that make my life
+---
+![Oskar](assets/images/oskar-main.jpg){: .sketchy-round-border .shadow-lg}
+
+Dear visitor! Welcome to my little website! Here you can read about my adventures in daily life, with drawing, gaming, my two cats and all the things I love! Enjoy!
+{: .lead .alert .alert-primary .alert-outline .p-3}
+
+## default content below
 ---
 
 Click [**Use this template**](https://github.com/dieghernan/chulapa-101/generate) button above for cloning this repo and get started with [Chulapa Jekyll theme](https://github.com/dieghernan/chulapa).

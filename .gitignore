@@ -1,5 +1,8 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-project.Rproj
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+
+sandbox*
+assets/images*
